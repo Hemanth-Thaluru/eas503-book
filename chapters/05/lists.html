@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5.1. Lists and Tuples &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5.2. List methods (functions)" href="methods.html" />
     <link rel="prev" title="5. Lists and Tuples" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -451,7 +456,7 @@ document.write(`
 <li><p><a class="reference external" href="https://github.com/mkzia/eas503-book-notes/blob/main/05/lists.ipynb">Jupyter Notebook</a></p></li>
 </ul>
 <section class="tex2jax_ignore mathjax_ignore" id="lists-and-tuples">
-<h1><span class="section-number">5.1. </span>Lists and Tuples<a class="headerlink" href="#lists-and-tuples" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">5.1. </span>Lists and Tuples<a class="headerlink" href="#lists-and-tuples" title="Permalink to this heading">#</a></h1>
 <ul>
 <li><p>So far we have covered the following data types: <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code>. Now we will cover <code class="docutils literal notranslate"><span class="pre">list</span></code>, and <code class="docutils literal notranslate"><span class="pre">tuple</span></code> which are a sequence data types.</p></li>
 <li><p>Data types in Python can be classified as <code class="docutils literal notranslate"><span class="pre">mutable</span></code> and <code class="docutils literal notranslate"><span class="pre">immutable</span></code>.</p>
@@ -483,16 +488,16 @@ consume large amount of computer memory and significantly slow down program perf
 </li>
 </ul>
 <section id="list">
-<h2><span class="section-number">5.1.1. </span>List<a class="headerlink" href="#list" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.1.1. </span>List<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> is a container for storing a sequence of values. The values can be of different type. When the values are all <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, or <code class="docutils literal notranslate"><span class="pre">bool</span></code>, you can use special functions.</p></li>
 </ul>
 <section id="list-index">
-<h3><span class="section-number">5.1.1.1. </span>List Index<a class="headerlink" href="#list-index" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.1. </span>List Index<a class="headerlink" href="#list-index" title="Permalink to this heading">#</a></h3>
 <p>An index is used to access a particular element in a list. All the elements in the list get a number or index. The element numbering starts at 0, which means that the first element is accessed using 0, the second element is accessed using 1, etc. Since the numbering starts at 0, Python indexing is called 0-indexed. The square brackets on a list with index number lets you access a particular element: my_list[0] will access the first element in the list.</p>
 </section>
 <section id="creating-a-list">
-<h3><span class="section-number">5.1.1.2. </span>Creating a list<a class="headerlink" href="#creating-a-list" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.2. </span>Creating a list<a class="headerlink" href="#creating-a-list" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span>
 <span class="n">days_in_months</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
 <span class="n">grades_count</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -500,7 +505,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="accessing-a-list">
-<h3><span class="section-number">5.1.1.3. </span>Accessing a list<a class="headerlink" href="#accessing-a-list" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.3. </span>Accessing a list<a class="headerlink" href="#accessing-a-list" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">grades</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">days_in_months</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>
@@ -510,7 +515,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="slicing-a-list">
-<h3><span class="section-number">5.1.1.4. </span>Slicing a list<a class="headerlink" href="#slicing-a-list" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.4. </span>Slicing a list<a class="headerlink" href="#slicing-a-list" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>List slicing allows you to pick out specific elements from a list. In oder to understand the list slicing, you need to know five things:</p>
 <ol class="arabic simple">
@@ -537,7 +542,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="index">
-<h3><span class="section-number">5.1.1.5. </span>-1 Index<a class="headerlink" href="#index" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.5. </span>-1 Index<a class="headerlink" href="#index" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Index -1 means the last index in the list</p></li>
 </ul>
@@ -551,7 +556,7 @@ consume large amount of computer memory and significantly slow down program perf
 </ul>
 </section>
 <section id="reassigning-a-list">
-<h3><span class="section-number">5.1.1.6. </span>Reassigning a list<a class="headerlink" href="#reassigning-a-list" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.6. </span>Reassigning a list<a class="headerlink" href="#reassigning-a-list" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span>
 <span class="n">grades</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
 <span class="n">grades</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
@@ -560,7 +565,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="deleting-from-a-list">
-<h3><span class="section-number">5.1.1.7. </span>Deleting from a list<a class="headerlink" href="#deleting-from-a-list" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.7. </span>Deleting from a list<a class="headerlink" href="#deleting-from-a-list" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Two ways to delete</p></li>
 </ul>
@@ -578,7 +583,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="the-plus-operator">
-<h3><span class="section-number">5.1.1.8. </span>The Plus Operator<a class="headerlink" href="#the-plus-operator" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.8. </span>The Plus Operator<a class="headerlink" href="#the-plus-operator" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator on a list combines two lists and <strong>RETURNS</strong> a new list</p></li>
 </ul>
@@ -589,7 +594,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="the-multiplication-operator">
-<h3><span class="section-number">5.1.1.9. </span>The Multiplication Operator<a class="headerlink" href="#the-multiplication-operator" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.9. </span>The Multiplication Operator<a class="headerlink" href="#the-multiplication-operator" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">*</span></code> duplicates a list x number of times and RETURNS a concatenated list</p></li>
 </ul>
@@ -599,7 +604,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="can-store-different-data-types">
-<h3><span class="section-number">5.1.1.10. </span>Can store different data types<a class="headerlink" href="#can-store-different-data-types" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.10. </span>Can store different data types<a class="headerlink" href="#can-store-different-data-types" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>But you will lose some processing functionality, such as <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, and <code class="docutils literal notranslate"><span class="pre">sum</span></code>.</p></li>
 </ul>
@@ -609,7 +614,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="in-operator">
-<h3><span class="section-number">5.1.1.11. </span><code class="docutils literal notranslate"><span class="pre">in</span></code> Operator<a class="headerlink" href="#in-operator" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.11. </span><code class="docutils literal notranslate"><span class="pre">in</span></code> Operator<a class="headerlink" href="#in-operator" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if an element exists in a list</p></li>
 </ul>
@@ -619,7 +624,7 @@ consume large amount of computer memory and significantly slow down program perf
 </div>
 </section>
 <section id="built-in-list-functions">
-<h3><span class="section-number">5.1.1.12. </span>Built-in List Functions<a class="headerlink" href="#built-in-list-functions" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.12. </span>Built-in List Functions<a class="headerlink" href="#built-in-list-functions" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code> calculate length of list</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max()</span></code> calculate max of list</p></li>
@@ -740,7 +745,7 @@ True
 </div>
 </section>
 <section id="list-unpacking">
-<h3><span class="section-number">5.1.1.13. </span>List unpacking<a class="headerlink" href="#list-unpacking" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.1.1.13. </span>List unpacking<a class="headerlink" href="#list-unpacking" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>

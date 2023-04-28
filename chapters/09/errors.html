@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>9.1. Errors and Exception Handling &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="10. Functions Revisited" href="../10/intro.html" />
     <link rel="prev" title="9. Error Handling" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -449,10 +454,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="errors-and-exception-handling">
-<h1><span class="section-number">9.1. </span>Errors and Exception Handling<a class="headerlink" href="#errors-and-exception-handling" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">9.1. </span>Errors and Exception Handling<a class="headerlink" href="#errors-and-exception-handling" title="Permalink to this heading">#</a></h1>
 <p>Python raises many different types of errors to inform you of what went wrong. The following are the most common errors that you should know.</p>
 <section id="syntaxerror-invalid-python-syntax">
-<h2><span class="section-number">9.1.1. </span>SyntaxError – invalid Python syntax<a class="headerlink" href="#syntaxerror-invalid-python-syntax" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.1. </span>SyntaxError – invalid Python syntax<a class="headerlink" href="#syntaxerror-invalid-python-syntax" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(()):</span>
    <span class="k">pass</span>
 
@@ -462,41 +467,41 @@ document.write(`
 </div>
 </section>
 <section id="nameerror-using-a-variable-before-it-has-been-defined">
-<h2><span class="section-number">9.1.2. </span>NameError – using a variable before it has been defined<a class="headerlink" href="#nameerror-using-a-variable-before-it-has-been-defined" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.2. </span>NameError – using a variable before it has been defined<a class="headerlink" href="#nameerror-using-a-variable-before-it-has-been-defined" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="typeerror-mismatch-data-type">
-<h2><span class="section-number">9.1.3. </span>TypeError – mismatch data type<a class="headerlink" href="#typeerror-mismatch-data-type" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.3. </span>TypeError – mismatch data type<a class="headerlink" href="#typeerror-mismatch-data-type" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;3&#39;</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </section>
 <section id="indexerror-accessing-an-index-that-does-not-exist">
-<h2><span class="section-number">9.1.4. </span>IndexError – accessing an index that does not exist<a class="headerlink" href="#indexerror-accessing-an-index-that-does-not-exist" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.4. </span>IndexError – accessing an index that does not exist<a class="headerlink" href="#indexerror-accessing-an-index-that-does-not-exist" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">my_list</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 <section id="valueerror-calling-a-built-in-function-with-invalid-value-type">
-<h2><span class="section-number">9.1.5. </span>ValueError – calling a built-in function with invalid value type<a class="headerlink" href="#valueerror-calling-a-built-in-function-with-invalid-value-type" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.5. </span>ValueError – calling a built-in function with invalid value type<a class="headerlink" href="#valueerror-calling-a-built-in-function-with-invalid-value-type" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
 <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;3a&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="keyerror-like-by-index-error-for-lists">
-<h2><span class="section-number">9.1.6. </span>KeyError – like by index error for lists<a class="headerlink" href="#keyerror-like-by-index-error-for-lists" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.6. </span>KeyError – like by index error for lists<a class="headerlink" href="#keyerror-like-by-index-error-for-lists" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;grade&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
 <span class="n">student</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 <section id="attributeerror-missing-attribute-variables-or-methods">
-<h2><span class="section-number">9.1.7. </span>AttributeError – missing attribute – variables or methods<a class="headerlink" href="#attributeerror-missing-attribute-variables-or-methods" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.7. </span>AttributeError – missing attribute – variables or methods<a class="headerlink" href="#attributeerror-missing-attribute-variables-or-methods" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
     <span class="n">class_variable1</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -512,14 +517,14 @@ document.write(`
 </div>
 </section>
 <section id="more-errors">
-<h2><span class="section-number">9.1.8. </span>More errors<a class="headerlink" href="#more-errors" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.8. </span>More errors<a class="headerlink" href="#more-errors" title="Permalink to this heading">#</a></h2>
 <p>For more errors see <a class="reference external" href="https://docs.python.org/3/library/exceptions.html">https://docs.python.org/3/library/exceptions.html</a></p>
 </section>
 <section id="raising-an-error">
-<h2><span class="section-number">9.1.9. </span>Raising an error<a class="headerlink" href="#raising-an-error" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.9. </span>Raising an error<a class="headerlink" href="#raising-an-error" title="Permalink to this heading">#</a></h2>
 <p>You can raise an error to indicate to the user that something is wrong.</p>
 <section id="raising-error-with-a-message-or-without-message">
-<h3><span class="section-number">9.1.9.1. </span>Raising error – with a message or without message<a class="headerlink" href="#raising-error-with-a-message-or-without-message" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.9.1. </span>Raising error – with a message or without message<a class="headerlink" href="#raising-error-with-a-message-or-without-message" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;a message&#39;</span><span class="p">)</span>
 <span class="k">raise</span> <span class="ne">ValueError</span>
 </pre></div>
@@ -546,7 +551,7 @@ document.write(`
 </section>
 </section>
 <section id="exception-handling">
-<h2><span class="section-number">9.1.10. </span>Exception Handling<a class="headerlink" href="#exception-handling" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1.10. </span>Exception Handling<a class="headerlink" href="#exception-handling" title="Permalink to this heading">#</a></h2>
 <p>You can gracefully catch errors that are raised and handle them using
 the <code class="docutils literal notranslate"><span class="pre">try/except</span></code> block.
 Try and Except blocks – a way to handle errors
@@ -570,7 +575,7 @@ user feedback.</p>
 </pre></div>
 </div>
 <section id="example1">
-<h3><span class="section-number">9.1.10.1. </span>Example1<a class="headerlink" href="#example1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.10.1. </span>Example1<a class="headerlink" href="#example1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">height</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter height: &#39;</span><span class="p">))</span>
@@ -589,7 +594,7 @@ user feedback.</p>
 </div>
 </section>
 <section id="example2">
-<h3><span class="section-number">9.1.10.2. </span>Example2<a class="headerlink" href="#example2" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.10.2. </span>Example2<a class="headerlink" href="#example2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;grade&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
 
 <span class="k">def</span> <span class="nf">get_key</span><span class="p">(</span><span class="n">some_dict</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default_value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -605,7 +610,7 @@ user feedback.</p>
 </div>
 </section>
 <section id="example3-combining-exceptions">
-<h3><span class="section-number">9.1.10.3. </span>Example3 – combining exceptions<a class="headerlink" href="#example3-combining-exceptions" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.10.3. </span>Example3 – combining exceptions<a class="headerlink" href="#example3-combining-exceptions" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;abcd.txt&#39;</span>
 <span class="k">try</span><span class="p">:</span> 
     <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> 

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>4.5. Exercises &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5. Lists and Tuples" href="../05/intro.html" />
     <link rel="prev" title="4.4. Choosing which statements to execute" href="statement_selection.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -448,9 +453,9 @@ document.write(`
 <li><p><a class="reference external" href="https://github.com/mkzia/eas503-book-notes/blob/main/04/exercises.ipynb">Jupyter Notebook</a></p></li>
 </ul>
 <section class="tex2jax_ignore mathjax_ignore" id="exercises">
-<h1><span class="section-number">4.5. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4.5. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
 <section id="exercise-1">
-<h2><span class="section-number">4.5.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>Write a program to prompt the user for temperature in Celsius, convert the temperature to Fahrenheit, and print temperature in Fahrenheit.</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -470,7 +475,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-2">
-<h2><span class="section-number">4.5.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
 <p>Modify exercise 1 to print a message when F &gt; 90 and F &lt; 32</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -495,7 +500,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-3">
-<h2><span class="section-number">4.5.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
 <p>Write a function to calculate the solution to a quadratic equation.
 <a class="reference external" href="https://www.mathsisfun.com/algebra/quadratic-equation.html">https://www.mathsisfun.com/algebra/quadratic-equation.html</a>
 Prompt the user to the coefficients a, b, and c.</p>
@@ -525,7 +530,7 @@ Prompt the user to the coefficients a, b, and c.</p>
 </div>
 </section>
 <section id="exercise-4">
-<h2><span class="section-number">4.5.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
 <p>Modify ex3 to add conditionals to print no real roots, double root, roots.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -560,7 +565,7 @@ Prompt the user to the coefficients a, b, and c.</p>
 </div>
 </section>
 <section id="exercise-5">
-<h2><span class="section-number">4.5.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this heading">#</a></h2>
 <p>Prompt user for three numbers and find the maximum value.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -589,7 +594,7 @@ Prompt the user to the coefficients a, b, and c.</p>
 </div>
 </section>
 <section id="exercise-6">
-<h2><span class="section-number">4.5.6. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.6. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this heading">#</a></h2>
 <p>Write a program to prompt the user for their user name.
 If it is ‘jdoe’, print a log in allowed message; otherwise, print another message.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
@@ -612,7 +617,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="exercise-7">
-<h2><span class="section-number">4.5.7. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.7. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this heading">#</a></h2>
 <p>Modify ex6 to only allow login if the user is active.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -643,7 +648,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="exercise-8">
-<h2><span class="section-number">4.5.8. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.8. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this heading">#</a></h2>
 <p>Write a program to prompt the user for name and check if it is john or jane.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -671,7 +676,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="exercise-9">
-<h2><span class="section-number">4.5.9. </span>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.9. </span>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this heading">#</a></h2>
 <p>Write a program that only allows a user to log in if they are a superuser or if they are a teacher and active.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -693,7 +698,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="exercise-10">
-<h2><span class="section-number">4.5.10. </span>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.10. </span>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this heading">#</a></h2>
 <p>Prompt user for age and check if they are 18 or older</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -715,7 +720,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="exercise-11">
-<h2><span class="section-number">4.5.11. </span>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.11. </span>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this heading">#</a></h2>
 <p>Prompt the user for two numbers and see if they are equal</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -736,7 +741,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="exercise-12">
-<h2><span class="section-number">4.5.12. </span>Exercise 12<a class="headerlink" href="#exercise-12" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.12. </span>Exercise 12<a class="headerlink" href="#exercise-12" title="Permalink to this heading">#</a></h2>
 <p>Prompt user to enter a number and check if it is odd or even</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -760,7 +765,7 @@ If it is ‘jdoe’, print a log in allowed message; otherwise, print another me
 </div>
 </section>
 <section id="id1">
-<h2><span class="section-number">4.5.13. </span>Exercise 12<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5.13. </span>Exercise 12<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Prompt user to enter a number and print ‘FizzBuzz’ if the number is a multiple of 5 and 7, ‘Fizz’
 if is a multiple of 5, and ‘Buzz’ if it is multiple of 7.</p>
 <div class="cell tag_hide-input tag_remove-output tag_output_scroll docutils container">

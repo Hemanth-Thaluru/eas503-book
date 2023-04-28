@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>4.4. Choosing which statements to execute &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="4.5. Exercises" href="exercises.html" />
     <link rel="prev" title="4.3. String Comparisons" href="strings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -437,7 +442,7 @@ document.write(`
 <li><p><a class="reference external" href="https://github.com/mkzia/eas503-book-notes/blob/main/04/statement_selection.ipynb">Jupyter Notebook</a></p></li>
 </ul>
 <section class="tex2jax_ignore mathjax_ignore" id="choosing-which-statements-to-execute">
-<h1><span class="section-number">4.4. </span>Choosing which statements to execute<a class="headerlink" href="#choosing-which-statements-to-execute" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4.4. </span>Choosing which statements to execute<a class="headerlink" href="#choosing-which-statements-to-execute" title="Permalink to this heading">#</a></h1>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">some</span> <span class="n">condition</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">do</span> <span class="n">something</span>
 <span class="k">elif</span> <span class="n">some</span> <span class="n">other</span> <span class="n">condition</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># else if </span>
@@ -457,8 +462,8 @@ document.write(`
 <li><p>conditions can be nested</p></li>
 </ul>
 <section id="examples">
-<h2><span class="section-number">4.4.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
-<table class="colwidths-auto table">
+<h2><span class="section-number">4.4.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>pH Level</p></th>
 <th class="head"><p>Solution Category</p></th>
@@ -536,7 +541,7 @@ document.write(`
 </div>
 </section>
 <section id="nested-if-statements">
-<h2><span class="section-number">4.4.2. </span>Nested if statements<a class="headerlink" href="#nested-if-statements" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.4.2. </span>Nested if statements<a class="headerlink" href="#nested-if-statements" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the pH level: &#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">ph</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> 

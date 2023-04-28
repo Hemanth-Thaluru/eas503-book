@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>7.2. Dictionary Exercises &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="7.3. Sets" href="sets.html" />
     <link rel="prev" title="7.1. Dictionaries" href="dictionary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -436,9 +441,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dictionary-exercises">
-<h1><span class="section-number">7.2. </span>Dictionary Exercises<a class="headerlink" href="#dictionary-exercises" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">7.2. </span>Dictionary Exercises<a class="headerlink" href="#dictionary-exercises" title="Permalink to this heading">#</a></h1>
 <section id="exercise-1">
-<h2><span class="section-number">7.2.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>Load people.tsv into a dictionary. Prompt user for filename</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -473,16 +478,16 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data_array</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nn">File ~/anaconda3/envs/book/lib/python3.10/site-packages/ipykernel/kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1184</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1185</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1186</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1187</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1188</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1189</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1190</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1191</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1192</span> <span class="p">)</span>
+<span class="nn">File ~/miniconda3/lib/python3.10/site-packages/ipykernel/kernelbase.py:1190,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1188</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1189</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1190</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1191</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1192</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1193</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1194</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1195</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1196</span> <span class="p">)</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
@@ -491,7 +496,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-2">
-<h2><span class="section-number">7.2.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
 <p>Write a function to convert month number to month name. First use a list and then a dictionary</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -558,7 +563,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-3">
-<h2><span class="section-number">7.2.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
 <p>Convert a text message to numbers using the following number scheme</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0 	space
 1 	., ?, !
@@ -662,7 +667,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-4">
-<h2><span class="section-number">7.2.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
 <p>Write a function that uses enumerate to print the index and value from range.
 Use vary the enumerate start index</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
@@ -699,7 +704,7 @@ Use vary the enumerate start index</p>
 </div>
 </section>
 <section id="exercise-5">
-<h2><span class="section-number">7.2.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this heading">#</a></h2>
 <p>Simulate two dice. Print the total, theoretical/expected probability, and simulated probability
 input: the number of simulations
 <a class="reference external" href="https://socratic.org/questions/what-is-the-expected-value-of-the-sum-of-two-rolls-of-a-six-sided-die">https://socratic.org/questions/what-is-the-expected-value-of-the-sum-of-two-rolls-of-a-six-sided-die</a></p>
@@ -787,17 +792,17 @@ input: the number of simulations
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total     Simulated Percent     Expected Percent 
 
-2                      2.79                 2.78
-3                      5.52                 5.56
+2                      2.77                 2.78
+3                      5.57                 5.56
 4                      8.34                 8.33
-5                     11.11                11.11
-6                     13.92                13.89
-7                     16.65                16.67
-8                     13.95                13.89
-9                     11.09                11.11
-10                     8.34                 8.33
-11                      5.5                 5.56
-12                     2.78                 2.78
+5                     11.04                11.11
+6                      13.9                13.89
+7                     16.58                16.67
+8                     13.96                13.89
+9                     11.13                11.11
+10                     8.33                 8.33
+11                     5.58                 5.56
+12                     2.79                 2.78
 </pre></div>
 </div>
 </div>

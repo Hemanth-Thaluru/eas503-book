@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.1. Introduction to Functions &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.2. Built-in functions" href="built_in.html" />
     <link rel="prev" title="2. Functions" href="functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -432,7 +437,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-functions">
-<h1><span class="section-number">2.1. </span>Introduction to Functions<a class="headerlink" href="#introduction-to-functions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.1. </span>Introduction to Functions<a class="headerlink" href="#introduction-to-functions" title="Permalink to this heading">#</a></h1>
 <p>A Functions is a small, self-contained sequence of statements/instructions that has a name. Example: a function to convert Celsius to Fahrenheit. Since the formula for converting from Celsius to Fahrenheit is always the same and the only variable is the temperature in Celsius, you can write a function that takes the temperature as an argument, perform the conversion, and then return the temperature in Fahrenheit.</p>
 <p>What are the advantages of using functions?</p>
 <ul class="simple">
@@ -462,7 +467,7 @@ document.write(`
 </div>
 </div>
 <section id="indentationerror">
-<h2><span class="section-number">2.1.1. </span>IndentationError<a class="headerlink" href="#indentationerror" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1.1. </span>IndentationError<a class="headerlink" href="#indentationerror" title="Permalink to this heading">#</a></h2>
 <p>An <strong>IndentationError</strong> is a type of <strong>SyntaxError</strong> that occurs when the indentation is incorrect.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_celsius_to_fahrenheit</span><span class="p">(</span><span class="n">degrees_in_celsius</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">degrees_in_celsius</span> <span class="o">+</span> <span class="mi">32</span>

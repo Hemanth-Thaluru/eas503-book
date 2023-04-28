@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3.4. String methods &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="3.5. Exercises" href="exercises.html" />
     <link rel="prev" title="3.3. Creating a Table" href="table.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -440,7 +445,7 @@ document.write(`
 <li><p><a class="reference external" href="https://github.com/mkzia/eas503-book-notes/blob/main/03/methods.ipynb">Jupyter Notebook</a></p></li>
 </ul>
 <section class="tex2jax_ignore mathjax_ignore" id="string-methods">
-<h1><span class="section-number">3.4. </span>String methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.4. </span>String methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>We have already encountered functions: built-in functions and functions we have defined. A method is another kind of function that is attached to a particular type. This section covers
 the methods that are attached to string types.</p></li>
@@ -448,7 +453,7 @@ the methods that are attached to string types.</p></li>
 <li><p>Methods are like functions, except that the first argument must be an object of the class in which the method is defined.</p></li>
 </ul>
 <section id="strip-methods">
-<h2><span class="section-number">3.4.1. </span>Strip Methods<a class="headerlink" href="#strip-methods" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.1. </span>Strip Methods<a class="headerlink" href="#strip-methods" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">strip()</span></code> – Strip spaces on the left and right of string</p></li>
 </ul>
@@ -524,7 +529,7 @@ ABBCCC   Dummy
 </div>
 </section>
 <section id="case-methods">
-<h2><span class="section-number">3.4.2. </span>Case Methods<a class="headerlink" href="#case-methods" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.2. </span>Case Methods<a class="headerlink" href="#case-methods" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">islower()</span></code> – Check if all alphabet characters are lower case</p></li>
 </ul>
@@ -639,7 +644,7 @@ ABBCCC   Dummy
 </div>
 </section>
 <section id="content-methods">
-<h2><span class="section-number">3.4.3. </span>Content Methods<a class="headerlink" href="#content-methods" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.3. </span>Content Methods<a class="headerlink" href="#content-methods" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> – Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all the characters are alphabet</p></li>
 </ul>
@@ -805,7 +810,7 @@ True
 </div>
 </section>
 <section id="modification-methods">
-<h2><span class="section-number">3.4.4. </span>Modification Methods<a class="headerlink" href="#modification-methods" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.4. </span>Modification Methods<a class="headerlink" href="#modification-methods" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">replace()</span></code> – Replaces character(s) with other character(s); returns a new string</p></li>
 <li><p>Given <code class="docutils literal notranslate"><span class="pre">(EAS503)</span></code>, how can you remove the parentheses?</p></li>
@@ -874,7 +879,7 @@ EAS503
 </div>
 </section>
 <section id="creating-a-new-string">
-<h2><span class="section-number">3.4.5. </span>Creating a new String<a class="headerlink" href="#creating-a-new-string" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.5. </span>Creating a new String<a class="headerlink" href="#creating-a-new-string" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">join((value1,</span> <span class="pre">value2,</span> <span class="pre">value3))</span></code> – Creates a new string separating the values by whatever is in the string</p></li>
 </ul>

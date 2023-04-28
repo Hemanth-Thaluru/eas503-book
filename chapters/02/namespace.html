@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.5. Namespace and Scope &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2.6. Exercises" href="exercises.html" />
     <link rel="prev" title="2.4. Return Statement" href="return.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -432,7 +437,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="namespace-and-scope">
-<h1><span class="section-number">2.5. </span>Namespace and Scope<a class="headerlink" href="#namespace-and-scope" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.5. </span>Namespace and Scope<a class="headerlink" href="#namespace-and-scope" title="Permalink to this heading">#</a></h1>
 <p><strong>Namespace</strong>: an association between identifiers and the things they represent in a program. In Python, modules, classes, and objects act as namespaces.</p>
 <p><strong>Scope</strong>: The area of a program where a given variable maybe reference. For examples, variables defined in functions are said to have local scope.</p>
 <div class="cell docutils container">
@@ -478,7 +483,7 @@ document.write(`
 </div>
 </div>
 <section id="tracing-function-calls-in-the-memory-location">
-<h2><span class="section-number">2.5.1. </span>Tracing Function Calls in the Memory Location<a class="headerlink" href="#tracing-function-calls-in-the-memory-location" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.5.1. </span>Tracing Function Calls in the Memory Location<a class="headerlink" href="#tracing-function-calls-in-the-memory-location" title="Permalink to this heading">#</a></h2>
 <p>Let us trace the function call <a class="reference external" href="https://pythontutor.com/visualize.html#code=def%20f%28x%29%3A%0A%20%20%20%20x%20%3D%202%20*%20x%0A%20%20%20%20return%20x%0A%20%20%20%20%0Ax%20%3D%201%0Ax%20%3D%20f%28x%20%2B%201%29%20%2B%20f%28x%20%2B%202%29&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=true&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">link</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>

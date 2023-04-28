@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>10.1. Functions Revisited &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="11. Miscellaneous Topics" href="../11/intro.html" />
     <link rel="prev" title="10. Functions Revisited" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -443,9 +448,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="functions-revisited">
-<h1><span class="section-number">10.1. </span>Functions Revisited<a class="headerlink" href="#functions-revisited" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">10.1. </span>Functions Revisited<a class="headerlink" href="#functions-revisited" title="Permalink to this heading">#</a></h1>
 <section id="function-variations">
-<h2><span class="section-number">10.1.1. </span>Function Variations<a class="headerlink" href="#function-variations" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.1.1. </span>Function Variations<a class="headerlink" href="#function-variations" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>no arguments</p></li>
 <li><p>positional/fixed/required arguments</p></li>
@@ -453,7 +458,7 @@ document.write(`
 <li><p>keyword arguments</p></li>
 </ul>
 <section id="function-input-example-1">
-<h3><span class="section-number">10.1.1.1. </span>Function Input Example 1<a class="headerlink" href="#function-input-example-1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.1.1. </span>Function Input Example 1<a class="headerlink" href="#function-input-example-1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">spam</span><span class="p">,</span> <span class="n">eggs</span><span class="p">,</span> <span class="n">toast</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ham</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>   <span class="c1"># first 2 required</span>
     <span class="nb">print</span> <span class="p">(</span><span class="n">spam</span><span class="p">,</span> <span class="n">eggs</span><span class="p">,</span> <span class="n">toast</span><span class="p">,</span> <span class="n">ham</span><span class="p">)</span>
 
@@ -466,7 +471,7 @@ document.write(`
 </div>
 </section>
 <section id="function-input-example-2">
-<h3><span class="section-number">10.1.1.2. </span>Function Input Example 2<a class="headerlink" href="#function-input-example-2" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.1.2. </span>Function Input Example 2<a class="headerlink" href="#function-input-example-2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> 
 	<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
 
@@ -475,7 +480,7 @@ document.write(`
 </div>
 </section>
 <section id="function-input-example-3">
-<h3><span class="section-number">10.1.1.3. </span>Function Input Example 3<a class="headerlink" href="#function-input-example-3" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.1.3. </span>Function Input Example 3<a class="headerlink" href="#function-input-example-3" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">intersect</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>                  <span class="c1"># scan first sequence</span>
@@ -506,7 +511,7 @@ document.write(`
 </section>
 </section>
 <section id="function-scope">
-<h2><span class="section-number">10.1.2. </span>Function Scope<a class="headerlink" href="#function-scope" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.1.2. </span>Function Scope<a class="headerlink" href="#function-scope" title="Permalink to this heading">#</a></h2>
 <p>Ref: Python for Programmers by Paul Deitel and Harvey Deitel</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -572,7 +577,7 @@ is important for performance. Function often manipulate large objects–frequenc
 </div>
 </section>
 <section id="memory-models">
-<h2><span class="section-number">10.1.3. </span>Memory Models<a class="headerlink" href="#memory-models" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.1.3. </span>Memory Models<a class="headerlink" href="#memory-models" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">original</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;He&#39;</span><span class="p">,</span> <span class="s1">&#39;Li&#39;</span><span class="p">]</span>
 <span class="n">final</span> <span class="o">=</span> <span class="n">original</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Be&#39;</span><span class="p">]</span>
 </pre></div>
@@ -588,7 +593,7 @@ is important for performance. Function often manipulate large objects–frequenc
 </div>
 <p><img alt="list3" src="../../_images/sublist_alias.png" /></p>
 <section id="scope-example-1">
-<h3><span class="section-number">10.1.3.1. </span>Scope Example 1<a class="headerlink" href="#scope-example-1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.3.1. </span>Scope Example 1<a class="headerlink" href="#scope-example-1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Global reporting!&#39;</span>
 
@@ -620,7 +625,7 @@ is important for performance. Function often manipulate large objects–frequenc
 </div>
 </section>
 <section id="scope-example-2">
-<h3><span class="section-number">10.1.3.2. </span>Scope Example 2<a class="headerlink" href="#scope-example-2" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.3.2. </span>Scope Example 2<a class="headerlink" href="#scope-example-2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="k">def</span> <span class="nf">function1</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">):</span>
 	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;my_list before change inside function1&#39;</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>

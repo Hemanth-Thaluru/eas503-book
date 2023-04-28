@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>EAS 503 &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Fundamentals" href="01/fundamentals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -253,8 +254,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -441,10 +446,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="eas-503">
-<h1>EAS 503<a class="headerlink" href="#eas-503" title="Permalink to this headline">#</a></h1>
+<h1>EAS 503<a class="headerlink" href="#eas-503" title="Permalink to this heading">#</a></h1>
 <p>Welcome to EAS503! EAS503 is a course taught in the Department of Engineering &amp; Applied Sciences at the University at Buffalo</p>
 <section id="course-information">
-<h2>Course Information<a class="headerlink" href="#course-information" title="Permalink to this headline">#</a></h2>
+<h2>Course Information<a class="headerlink" href="#course-information" title="Permalink to this heading">#</a></h2>
 <p><strong>Course Name:</strong> Python for Data Scientists</p>
 <p><strong>Course Number:</strong> EAS 503</p>
 <p><strong>Level:</strong> Graduate</p>
@@ -454,7 +459,7 @@ document.write(`
 <p><strong>Registration:</strong> Students interested in enrolling outside of the Engineering Science MS Data Science program should fill out a force registration request: <a class="reference external" href="https://academics.eng.buffalo.edu/">https://academics.eng.buffalo.edu/</a></p>
 </section>
 <section id="course-content">
-<h2>Course Content<a class="headerlink" href="#course-content" title="Permalink to this headline">#</a></h2>
+<h2>Course Content<a class="headerlink" href="#course-content" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Exam (1) - 5%</p></li>
 <li><p>Quizzes (5) - 20%</p></li>
@@ -464,7 +469,7 @@ document.write(`
 </ul>
 </section>
 <section id="exam">
-<h2>Exam<a class="headerlink" href="#exam" title="Permalink to this headline">#</a></h2>
+<h2>Exam<a class="headerlink" href="#exam" title="Permalink to this heading">#</a></h2>
 <p>The first exam will be on <strong>Friday, February 24, 2023 5:00 PM - 8:00 PM in NSC 225</strong>. This will be a paper exam. Please bring the following the the exam:</p>
 <ol class="arabic simple">
 <li><p>Pencils</p></li>
@@ -474,7 +479,7 @@ document.write(`
 </ol>
 </section>
 <section id="quizzes">
-<h2>Quizzes<a class="headerlink" href="#quizzes" title="Permalink to this headline">#</a></h2>
+<h2>Quizzes<a class="headerlink" href="#quizzes" title="Permalink to this heading">#</a></h2>
 <p>30-minute paper quizzes will be given at the beginning of class.
 Quiz Dates – see Piazza</p>
 <ul class="simple">
@@ -482,7 +487,7 @@ Quiz Dates – see Piazza</p>
 </ul>
 </section>
 <section id="programming-assignments">
-<h2>Programming Assignments<a class="headerlink" href="#programming-assignments" title="Permalink to this headline">#</a></h2>
+<h2>Programming Assignments<a class="headerlink" href="#programming-assignments" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Descriptions for the programming assignments and necessary files will be posted on UB Learn.</p></li>
 <li><p>You will submit your Python file on Gradescope.</p></li>
@@ -493,7 +498,7 @@ Quiz Dates – see Piazza</p>
 </ul>
 </section>
 <section id="kritik-assignment">
-<h2>Kritik Assignment<a class="headerlink" href="#kritik-assignment" title="Permalink to this headline">#</a></h2>
+<h2>Kritik Assignment<a class="headerlink" href="#kritik-assignment" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>No late submissions will be accepted</p></li>
 <li><p>Kritik assignments have three stages: create, evaluation, feedback stage. You must complete each stage. Do not take points off when doing peer evaluation without explaining why you took points off.</p></li>
@@ -501,7 +506,7 @@ Quiz Dates – see Piazza</p>
 </ul>
 </section>
 <section id="mini-projects">
-<h2>Mini-Projects<a class="headerlink" href="#mini-projects" title="Permalink to this headline">#</a></h2>
+<h2>Mini-Projects<a class="headerlink" href="#mini-projects" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Mini-projects are like programming assignments, but they are longer.</p></li>
 <li><p>Description of mini-projects will be posted on UB Learns along with the required files.</p></li>
@@ -510,11 +515,11 @@ Quiz Dates – see Piazza</p>
 </ul>
 </section>
 <section id="late-policy">
-<h2>Late Policy<a class="headerlink" href="#late-policy" title="Permalink to this headline">#</a></h2>
+<h2>Late Policy<a class="headerlink" href="#late-policy" title="Permalink to this heading">#</a></h2>
 <p>You have 10 late days that you can use to submit your programming assignments and mini-projects (1-2) late. Mini-project 3 must be on time. If you submit two hours late, it will be rounded up to one day late. In order to submit a late solution, you must email the professor, TAs, and grader with your solution zipped. Python files are blocked by outlook.</p>
 </section>
 <section id="course-resources">
-<h2>Course Resources<a class="headerlink" href="#course-resources" title="Permalink to this headline">#</a></h2>
+<h2>Course Resources<a class="headerlink" href="#course-resources" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>This website will host the course book (<a class="reference external" href="https://mkzia.github.io/eas503-book">https://mkzia.github.io/eas503-book</a>)</p></li>
 <li><p>Github (<a class="github reference external" href="https://github.com/mkzia/eas503">mkzia/eas503</a>) for hosting lecture Jupyter notebooks</p></li>
@@ -535,7 +540,7 @@ Quiz Dates – see Piazza</p>
 </ul>
 </section>
 <section id="preparation-for-the-first-class">
-<h2>Preparation for the first class<a class="headerlink" href="#preparation-for-the-first-class" title="Permalink to this headline">#</a></h2>
+<h2>Preparation for the first class<a class="headerlink" href="#preparation-for-the-first-class" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Ensure you can access EAS503 course page on UB Learns</p></li>
 <li><p>Ensure you can access the course book (<a class="reference external" href="https://mkzia.github.io/eas503-book">https://mkzia.github.io/eas503-book</a>)</p></li>
@@ -552,7 +557,7 @@ Quiz Dates – see Piazza</p>
 </div>
 </section>
 <section id="academic-integrity">
-<h2>Academic Integrity<a class="headerlink" href="#academic-integrity" title="Permalink to this headline">#</a></h2>
+<h2>Academic Integrity<a class="headerlink" href="#academic-integrity" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Academic integrity is a fundamental university value. Through the

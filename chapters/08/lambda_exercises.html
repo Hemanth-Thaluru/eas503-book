@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>8.2. Lambda, Filter, Map, and Sorted Solutions &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="9. Error Handling" href="../09/intro.html" />
     <link rel="prev" title="8.1. Lambda, Filter, Map, and Sorted" href="lambda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -443,9 +448,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lambda-filter-map-and-sorted-solutions">
-<h1><span class="section-number">8.2. </span>Lambda, Filter, Map, and Sorted Solutions<a class="headerlink" href="#lambda-filter-map-and-sorted-solutions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">8.2. </span>Lambda, Filter, Map, and Sorted Solutions<a class="headerlink" href="#lambda-filter-map-and-sorted-solutions" title="Permalink to this heading">#</a></h1>
 <section id="exercise-1">
-<h2><span class="section-number">8.2.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>Write a function that squares a number and returns the value.
 Write it again again using Lambda functions</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
@@ -475,7 +480,7 @@ Write it again again using Lambda functions</p>
 </div>
 </section>
 <section id="exercise-2">
-<h2><span class="section-number">8.2.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
 <p>Write a lambda function for adding two numbers</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -498,7 +503,7 @@ Write it again again using Lambda functions</p>
 </div>
 </section>
 <section id="exercise-3">
-<h2><span class="section-number">8.2.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
 <p>Write a lambda function that multiples two numbers. Use the lambda function as an input to another function.</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -523,7 +528,7 @@ Write it again again using Lambda functions</p>
 </div>
 </section>
 <section id="exercise-4">
-<h2><span class="section-number">8.2.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Write a function to double a list</p></li>
 <li><p>Use list comprehension to double a list</p></li>
@@ -578,7 +583,7 @@ Write it again again using Lambda functions</p>
 </div>
 </section>
 <section id="exercise-5">
-<h2><span class="section-number">8.2.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this heading">#</a></h2>
 <p>Capitalize the names in the students list</p>
 <ol class="arabic simple">
 <li><p>using a list and loop</p></li>
@@ -624,7 +629,7 @@ Write it again again using Lambda functions</p>
 </div>
 </section>
 <section id="exercise-6">
-<h2><span class="section-number">8.2.6. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.6. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this heading">#</a></h2>
 <p>Using lambda and map, convert the numbers to float</p>
 <p>Covert each value to float</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
@@ -649,7 +654,7 @@ Write it again again using Lambda functions</p>
 </div>
 </section>
 <section id="exercise-7">
-<h2><span class="section-number">8.2.7. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.7. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this heading">#</a></h2>
 <p>Create a dictionary where the key is year and
 value is True/False if the year is a leap year</p>
 <ol class="arabic simple">
@@ -751,7 +756,7 @@ value is True/False if the year is a leap year</p>
 </div>
 </section>
 <section id="exercise-8">
-<h2><span class="section-number">8.2.8. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.8. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this heading">#</a></h2>
 <p>Sort <code class="docutils literal notranslate"><span class="pre">x</span></code> using value</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -778,7 +783,7 @@ value is True/False if the year is a leap year</p>
 </div>
 </section>
 <section id="exercise-9">
-<h2><span class="section-number">8.2.9. </span>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.9. </span>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this heading">#</a></h2>
 <p>sort dictionary by username; reverse sort</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -812,7 +817,7 @@ value is True/False if the year is a leap year</p>
 </div>
 </section>
 <section id="exercise-10">
-<h2><span class="section-number">8.2.10. </span>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.10. </span>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this heading">#</a></h2>
 <p>Sort dictionary by grade; reverse sort</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -846,7 +851,7 @@ value is True/False if the year is a leap year</p>
 </div>
 </section>
 <section id="exercise-11">
-<h2><span class="section-number">8.2.11. </span>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.11. </span>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this heading">#</a></h2>
 <p>Sort array by len of names</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">
@@ -879,7 +884,7 @@ Janette
 </div>
 </section>
 <section id="exercise-12">
-<h2><span class="section-number">8.2.12. </span>Exercise 12<a class="headerlink" href="#exercise-12" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2.12. </span>Exercise 12<a class="headerlink" href="#exercise-12" title="Permalink to this heading">#</a></h2>
 <p>Sort dictionary by value</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <details class="hide above-input">

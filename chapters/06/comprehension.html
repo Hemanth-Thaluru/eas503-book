@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>6.6. Comprehension &#8212; EAS503: Python for Data Scientists</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="6.7. Additional Exercises" href="additional_exercises.html" />
     <link rel="prev" title="6.5. Modify Loop Exercises" href="modify_loop_exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -254,8 +255,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../14/intro.html">14. NumPy and Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.1. Numpy and Pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.2. Cross-referenced Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_numpy.html">14.1. Introduction to NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/implementing_numpy.html">14.2. Implementing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/intro_pandas.html">14.3. Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/selecting_dataframes.html">14.4. Methods for Selecting Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/np_pd.html">14.5. NumPy and Pandas operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/exercises.html">14.6. Cross-referenced Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -447,9 +452,9 @@ document.write(`
 <li><p><a class="reference external" href="https://github.com/mkzia/eas503-book-notes/blob/main/06/comprehension.ipynb">Jupyter Notebook</a></p></li>
 </ul>
 <section class="tex2jax_ignore mathjax_ignore" id="comprehension">
-<h1><span class="section-number">6.6. </span>Comprehension<a class="headerlink" href="#comprehension" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">6.6. </span>Comprehension<a class="headerlink" href="#comprehension" title="Permalink to this heading">#</a></h1>
 <section id="list-comprehension">
-<h2><span class="section-number">6.6.1. </span>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.1. </span>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Unique to Python</p></li>
 <li><p>Three variations</p></li>
@@ -466,7 +471,7 @@ document.write(`
 </div>
 </section>
 <section id="tuple-comprehension">
-<h2><span class="section-number">6.6.2. </span>Tuple Comprehension<a class="headerlink" href="#tuple-comprehension" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.2. </span>Tuple Comprehension<a class="headerlink" href="#tuple-comprehension" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Tuple Comprehension returns a generator</p></li>
 <li><p>Generators generate one-time use values</p></li>
@@ -481,10 +486,10 @@ document.write(`
 </div>
 </section>
 <section id="list-comprehension-exercises">
-<h2><span class="section-number">6.6.3. </span>List Comprehension Exercises<a class="headerlink" href="#list-comprehension-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.3. </span>List Comprehension Exercises<a class="headerlink" href="#list-comprehension-exercises" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="exercise-1">
-<h2><span class="section-number">6.6.4. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.4. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>Re-write the following code to use List Comprehension</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -513,7 +518,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-2">
-<h2><span class="section-number">6.6.5. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.5. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
 <p>Re-write the following code to use List Comprehension
 Multiply each number by 10</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -543,7 +548,7 @@ Multiply each number by 10</p>
 </div>
 </section>
 <section id="exercise-3">
-<h2><span class="section-number">6.6.6. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.6. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
 <p>Upper case each letter in animal variable</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animal</span> <span class="o">=</span> <span class="s1">&#39;buffalo&#39;</span>
 </pre></div>
@@ -569,7 +574,7 @@ Multiply each number by 10</p>
 </div>
 </section>
 <section id="exercise-4">
-<h2><span class="section-number">6.6.7. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.7. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
 <p>Title each name in the student list</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">]</span>
 </pre></div>
@@ -597,7 +602,7 @@ Multiply each number by 10</p>
 </div>
 </section>
 <section id="exercise-5">
-<h2><span class="section-number">6.6.8. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.8. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this heading">#</a></h2>
 <p>Use list comprehension to get the Truthiness of each element in <code class="docutils literal notranslate"><span class="pre">my_list</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">[]]</span>
 </pre></div>
@@ -623,7 +628,7 @@ Multiply each number by 10</p>
 </div>
 </section>
 <section id="exercise-6">
-<h2><span class="section-number">6.6.9. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.9. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this heading">#</a></h2>
 <p>Convert each element of my_list to str using list comprehension</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
@@ -649,7 +654,7 @@ Multiply each number by 10</p>
 </div>
 </section>
 <section id="exercise-7">
-<h2><span class="section-number">6.6.10. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.10. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this heading">#</a></h2>
 <p>Use list comprehension to reduce a list of numbers to just even or odd</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
@@ -671,7 +676,7 @@ Multiply each number by 10</p>
 </div>
 </section>
 <section id="exercise-8">
-<h2><span class="section-number">6.6.11. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.11. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this heading">#</a></h2>
 <p>Use list comprehension to modify a list of numbers such that evens are left as is
 and the odds are raised to the three power</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -698,7 +703,7 @@ and the odds are raised to the three power</p>
 </div>
 </section>
 <section id="exercise-9">
-<h2><span class="section-number">6.6.12. </span>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6.12. </span>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this heading">#</a></h2>
 <p>Use list comprehension to remove vowels from a sentence</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;I rEAlly want to gO to work&#39;</span>
 </pre></div>
